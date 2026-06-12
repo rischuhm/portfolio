@@ -98,25 +98,19 @@ a:hover {
 /* Hero */
 .hero {
   position: relative;
-  min-height: auto;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    "intro image"
-    "details image";
-  align-items: start;
+    "intro image";
+  align-items: center;
   gap: 0 60px;
-  padding: 100px 60px 60px;
+  padding: 120px 80px 100px;
   background: var(--color-bg);
 }
 
 .hero__intro {
   grid-area: intro;
-  text-align: center;
-}
-
-.hero__details {
-  grid-area: details;
   text-align: center;
 }
 
@@ -170,8 +164,7 @@ a:hover {
   grid-area: image;
   width: 100%;
   max-width: 380px;
-  height: 100%;
-  min-height: 380px;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius);
   overflow: hidden;
   margin: 0 auto;
@@ -189,31 +182,12 @@ a:hover {
   transform: scale(1.04);
 }
 
-.hero__meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 24px;
-  font-size: 17px;
-  color: var(--color-text-secondary);
-  margin-bottom: 24px;
-}
-
-.hero__meta .bi {
-  color: var(--color-text-secondary);
-  font-size: 16px;
-  margin-right: 6px;
-}
-
-.hero__meta a {
-  color: var(--color-text-secondary);
-}
-
 .hero__ctas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 18px 32px;
+  margin-top: 24px;
 }
 
 /* Apple-style link with chevron */
@@ -255,6 +229,28 @@ a:hover {
 .cta-icon:hover {
   background: var(--color-text-secondary);
   color: var(--color-bg);
+  transform: translateY(-2px);
+}
+
+/* Primary text CTA button */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #333333;
   transform: translateY(-2px);
 }
 
@@ -511,7 +507,6 @@ a:hover {
 
   .hero__image {
     max-width: 320px;
-    min-height: 320px;
   }
 }
 
@@ -520,8 +515,7 @@ a:hover {
     grid-template-columns: 1fr;
     grid-template-areas:
       "intro"
-      "image"
-      "details";
+      "image";
     gap: 24px;
     padding: 90px 22px 40px;
     align-items: center;
@@ -533,28 +527,6 @@ a:hover {
     min-height: auto;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
-  }
-
-  .hero__meta {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .hero__meta span,
-  .hero__meta a {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .hero__meta .bi {
-    width: 24px;
-    text-align: center;
-    margin-right: 12px;
-    flex-shrink: 0;
   }
 }
 

@@ -27,19 +27,6 @@ layout: base.njk
       </svg>
     </h1>
     <p class="hero__title">{{ cv.title }}</p>
-  </div>
-
-  <div class="hero__image">
-    <img src="/assets/profile.jpg" alt="Portrait von {{ cv.name }}">
-  </div>
-
-  <div class="hero__details">
-    <div class="hero__meta">
-      <span><i class="bi bi-geo-alt" aria-hidden="true"></i> {{ cv.location }}</span>
-      <span><i class="bi bi-calendar" aria-hidden="true"></i> geb. {{ cv.birth }}</span>
-      <a href="tel:{{ cv.phone | replace(' ', '') }}"><i class="bi bi-telephone" aria-hidden="true"></i> {{ cv.phone }}</a>
-      <a href="mailto:{{ cv.email }}"><i class="bi bi-envelope" aria-hidden="true"></i> {{ cv.email }}</a>
-    </div>
 
     <div class="hero__ctas">
       <a class="cta-icon" href="{{ meta.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn Profil">
@@ -49,6 +36,14 @@ layout: base.njk
         <i class="bi bi-github" aria-hidden="true"></i>
       </a>
     </div>
+
+    <a class="cta-button" href="/assets/Lebenslauf%20Richard_Richter%20Lehramt.pdf" download>
+      <i class="bi bi-download" aria-hidden="true"></i> Lebenslauf runterladen
+    </a>
+  </div>
+
+  <div class="hero__image">
+    <img src="/assets/profile.jpg" alt="Portrait von {{ cv.name }}">
   </div>
 </header>
 
