@@ -104,8 +104,8 @@ a:hover {
   grid-template-areas:
     "intro image"
     "details image";
-  align-items: start;
-  gap: 40px;
+  align-items: center;
+  gap: 20px 60px;
   padding: 100px 60px 60px;
   background: var(--color-bg);
 }
@@ -113,13 +113,11 @@ a:hover {
 .hero__intro {
   grid-area: intro;
   text-align: center;
-  align-self: end;
 }
 
 .hero__details {
   grid-area: details;
   text-align: center;
-  align-self: start;
 }
 
 .hero__eyebrow {
@@ -511,11 +509,6 @@ a:hover {
       "details";
     gap: 24px;
     padding: 90px 22px 40px;
-  }
-
-  .hero__intro,
-  .hero__details {
-    align-self: center;
   }
 
   .hero__image {
