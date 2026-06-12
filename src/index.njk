@@ -10,7 +10,7 @@ layout: base.njk
 {% endmacro %}
 
 <header class="hero">
-  <div class="hero__content">
+  <div class="hero__intro">
     <h1 class="hero__name" aria-label="{{ cv.name }}">
       <svg class="name-trick" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
         <defs>
@@ -27,7 +27,13 @@ layout: base.njk
       </svg>
     </h1>
     <p class="hero__title">{{ cv.title }}</p>
+  </div>
 
+  <div class="hero__image">
+    <img src="/assets/profile.jpg" alt="Portrait von {{ cv.name }}">
+  </div>
+
+  <div class="hero__details">
     <div class="hero__meta">
       <span><i class="bi bi-geo-alt" aria-hidden="true"></i> {{ cv.location }}</span>
       <span><i class="bi bi-calendar" aria-hidden="true"></i> geb. {{ cv.birth }}</span>
@@ -43,10 +49,6 @@ layout: base.njk
         <i class="bi bi-github" aria-hidden="true"></i>
       </a>
     </div>
-  </div>
-
-  <div class="hero__image">
-    <img src="/assets/profile.jpg" alt="Portrait von {{ cv.name }}">
   </div>
 </header>
 
