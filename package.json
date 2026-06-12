@@ -1,0 +1,24 @@
+{
+  "name": "richard-richter-cv",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Richard Richter's CV page built with Eleventy",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve --watch",
+    "serve": "eleventy --serve"
+  },
+  "keywords": [
+    "cv",
+    "eleventy",
+    "11ty"
+  ],
+  "author": "Richard Richter",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1"
+  }
+}

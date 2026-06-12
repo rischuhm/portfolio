@@ -1,0 +1,158 @@
+{
+  "name": "Richard Richter",
+  "title": "DevOps and AI Consultant",
+  "birth": "16.07.1994 in Potsdam",
+  "location": "Blumenstr. 15, 04105 Leipzig",
+  "phone": "0176 436 900 96",
+  "email": "rich.richter94@gmail.com",
+  "summary": "DevOps Engineer und Scrum Master mit Erfahrung in Cloudmigration, Prozessautomatisierung und agiler Teamführung in internationalen Remote-Teams.",
+  "sections": [
+    {
+      "id": "experience",
+      "title": "Berufserfahrung",
+      "items": [
+        {
+          "period": "05.2025 – heute",
+          "role": "DevOps Consultant",
+          "company": "XALT",
+          "tasks": [
+            "Kundenberatung zu Kollaborations- und Projektmanagement-Tools",
+            "Coaching und Training zu agilem Arbeiten"
+          ]
+        },
+        {
+          "period": "06.2023 – 04.2025",
+          "role": "Scrum Master",
+          "company": "Webfleet Solutions Development",
+          "tasks": [
+            "Schulung internationaler Teams zu agiler Arbeitsweise",
+            "Zielgerichtete Moderation von Dailies und Retrospektiven in Remote-Teams",
+            "Trainings zu Kommunikation, insbesondere Gewaltfreie Kommunikation"
+          ]
+        },
+        {
+          "period": "11.2022 – 04.2025",
+          "role": "DevOps Engineer",
+          "company": "Webfleet Solutions Development",
+          "tasks": [
+            "Wartung und Upgrade von Cloudanwendungen",
+            "Bearbeitung und Umsetzung von Nutzeranfragen",
+            "Prozessautomatisierung",
+            "Unterstützung bei Cloudmigration"
+          ]
+        },
+        {
+          "period": "01.2022 – 10.2022",
+          "role": "DevOps Engineer",
+          "company": "Deutsche Telekom Technik",
+          "tasks": [
+            "Automatisierung und Orchestrierung von Serveranwendungen",
+            "Training von Kollegen in Programmierung",
+            "Serverwartung und Troubleshooting"
+          ]
+        },
+        {
+          "period": "10.2018 – 12.2021",
+          "role": "Dualer Student",
+          "company": "T-Systems International Leipzig",
+          "tasks": [
+            "Routing und Switching div. Kundenprojekte",
+            "Prozessautomatisierung durch eigens entwickelte WebApp",
+            "Anwendungsentwicklung",
+            "Training anderer Studenten im Arbeitsprozess"
+          ]
+        },
+        {
+          "period": "06.2018 – 12.2021",
+          "role": "Freiberuflicher Dozent",
+          "company": "Deutsch, Mathematik und Informatik in Gruppen- und Einzelunterricht",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Bildungsweg",
+      "items": [
+        {
+          "period": "10.2018 – 12.2021",
+          "role": "Duales Studium B.Sc. Wirtschaftsinformatik – Business Information Systems",
+          "company": "FOM Leipzig",
+          "tasks": []
+        },
+        {
+          "period": "08.2016 – 10.2018",
+          "role": "Studium B.A. Lehramt Grundschulpädagogik (abgebrochen)",
+          "company": "FU Berlin",
+          "tasks": [
+            "Fächer: Deutsch, Mathematik und NaWi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "certifications",
+      "title": "Zertifizierungen",
+      "items": [
+        {
+          "period": "01.2025",
+          "role": "Scrum Master Yellow Belt",
+          "company": "",
+          "tasks": []
+        },
+        {
+          "period": "11.2022",
+          "role": "Azure Fundamentals AZ-900",
+          "company": "",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "abroad",
+      "title": "Auslandserfahrung",
+      "items": [
+        {
+          "period": "08.2014 – 08.2016",
+          "role": "IJFD über das DRK in Haifa, Israel",
+          "company": "",
+          "tasks": [
+            "Vor- und Nachbereitung von Unterrichtseinheiten",
+            "Übernahme einiger Unterrichtsstunden",
+            "Unterstützung der Schüler bei Abschlussprojekten"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "languages",
+      "title": "Sprachkenntnisse",
+      "items": [
+        {
+          "period": "",
+          "role": "Deutsch C2 (Muttersprache)",
+          "company": "",
+          "tasks": []
+        },
+        {
+          "period": "",
+          "role": "Englisch C1",
+          "company": "",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "title": "Weiteres",
+      "items": [
+        {
+          "period": "",
+          "role": "Führerschein Klasse B",
+          "company": "",
+          "tasks": []
+        }
+      ]
+    }
+  ]
+}

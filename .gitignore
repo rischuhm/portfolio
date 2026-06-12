@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Eleventy output
+_site/
+
+# Misc
+.DS_Store
+.env
+.venv*

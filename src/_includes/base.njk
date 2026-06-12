@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ cv.name }} — {{ cv.title }}</title>
+  <meta name="description" content="{{ cv.summary }}">
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="/styles/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <nav class="globalnav" aria-label="Global">
+    <div class="globalnav__content">
+      <ul class="globalnav__links">
+        <li><a href="#experience">Erfahrung</a></li>
+        <li><a href="#education">Bildung</a></li>
+        <li><a href="#certifications">Zertifikate</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  {{ content | safe }}
+
+  <footer class="footer">
+    <p>© {{ cv.name }}</p>
+  </footer>
+</body>
+</html>

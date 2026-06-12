@@ -1,0 +1,182 @@
+---
+layout: base.njk
+---
+
+{% macro cta_link(url, text) %}
+  <a class="cta-link" href="{{ url }}" target="_blank" rel="noopener">
+    {{ text }}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  </a>
+{% endmacro %}
+
+<header class="hero">
+  <div class="hero__content">
+    <h1 class="hero__name" aria-label="{{ cv.name }}">
+      <svg class="name-trick" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <defs>
+          <linearGradient id="nameGradient" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#000000" />
+            <stop offset="100%" stop-color="#9a9a9a" />
+          </linearGradient>
+        </defs>
+        <g transform="translate(90, 0)">
+          <text class="name-trick__rich" x="0" y="230" fill="url(#nameGradient)">RICH</text>
+          <text class="name-trick__suffix name-trick__suffix--top" x="630" y="110" fill="url(#nameGradient)">ard</text>
+          <text class="name-trick__suffix name-trick__suffix--bottom" x="630" y="230" fill="url(#nameGradient)">ter</text>
+        </g>
+      </svg>
+    </h1>
+    <p class="hero__title">{{ cv.title }}</p>
+
+    <div class="hero__meta">
+      <span><i class="bi bi-geo-alt" aria-hidden="true"></i> {{ cv.location }}</span>
+      <span><i class="bi bi-calendar" aria-hidden="true"></i> geb. {{ cv.birth }}</span>
+      <a href="tel:{{ cv.phone | replace(' ', '') }}"><i class="bi bi-telephone" aria-hidden="true"></i> {{ cv.phone }}</a>
+      <a href="mailto:{{ cv.email }}"><i class="bi bi-envelope" aria-hidden="true"></i> {{ cv.email }}</a>
+    </div>
+
+    <div class="hero__ctas">
+      <a class="cta-icon" href="{{ meta.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn Profil">
+        <i class="bi bi-linkedin" aria-hidden="true"></i>
+      </a>
+      <a class="cta-icon" href="#" target="_blank" rel="noopener" aria-label="GitHub Profil">
+        <i class="bi bi-github" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__image">
+    <img src="/assets/profile.jpg" alt="Portrait von {{ cv.name }}">
+  </div>
+</header>
+
+<main>
+  <section class="section" id="experience">
+    <div class="section__content">
+      <p class="section__eyebrow">Berufserfahrung</p>
+      <h2 class="section__title">Von Cloud bis Klassenzimmer.</h2>
+
+      <div class="tile-grid">
+        {% for item in cv.sections[0].items %}
+          <article class="tile {% if loop.index0 % 2 == 1 %}tile--dark{% endif %}">
+            <div class="tile__head">
+              <span class="tile__period">{{ item.period }}</span>
+              <h3 class="tile__title">{{ item.role }}</h3>
+              <p class="tile__company">{{ item.company }}</p>
+            </div>
+            {% if item.tasks.length %}
+              <div class="tile__body">
+                <ul class="tile__tasks">
+                  {% for task in item.tasks %}
+                    <li>{{ task }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--secondary" id="education">
+    <div class="section__content">
+      <p class="section__eyebrow">Bildungsweg</p>
+      <h2 class="section__title">Wirtschaftsinformatik trifft Pädagogik.</h2>
+
+      <div class="tile-grid">
+        {% for item in cv.sections[1].items %}
+          <article class="tile">
+            <div class="tile__head">
+              <span class="tile__period">{{ item.period }}</span>
+              <h3 class="tile__title">{{ item.role }}</h3>
+              <p class="tile__company">{{ item.company }}</p>
+            </div>
+            {% if item.tasks.length %}
+              <div class="tile__body">
+                <ul class="tile__tasks">
+                  {% for task in item.tasks %}
+                    <li>{{ task }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="certifications">
+    <div class="section__content">
+      <p class="section__eyebrow">Zertifizierungen</p>
+      <h2 class="section__title">Ausgebildet. Zertifiziert.</h2>
+
+      <ul class="simple-list">
+        {% for item in cv.sections[2].items %}
+          <li class="simple-list__item">
+            <p class="simple-list__label">{{ item.role }}</p>
+            <p class="simple-list__meta">{{ item.period }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="abroad">
+    <div class="section__content">
+      <p class="section__eyebrow">Auslandserfahrung</p>
+      <h2 class="section__title">Zwei Jahre Israel.</h2>
+
+      <article class="tile tile--wide tile--dark">
+        <div class="tile__head">
+          <span class="tile__period">{{ cv.sections[3].items[0].period }}</span>
+          <h3 class="tile__title">{{ cv.sections[3].items[0].role }}</h3>
+        </div>
+        <div class="tile__body">
+          <ul class="tile__tasks">
+            {% for task in cv.sections[3].items[0].tasks %}
+              <li>{{ task }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--secondary" id="languages">
+    <div class="section__content">
+      <p class="section__eyebrow">Sprachkenntnisse</p>
+      <h2 class="section__title">Kommunikation auf Augenhöhe.</h2>
+
+      <ul class="simple-list">
+        {% for item in cv.sections[4].items %}
+          <li class="simple-list__item">
+            <p class="simple-list__label">{{ item.role }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="other">
+    <div class="section__content">
+      <p class="section__eyebrow">Weiteres</p>
+      <h2 class="section__title">Das kleine Extra.</h2>
+
+      <ul class="simple-list">
+        {% for item in cv.sections[5].items %}
+          <li class="simple-list__item">
+            <p class="simple-list__label">{{ item.role }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="footer-cta" id="contact">
+    <h2 class="footer-cta__title">Lass uns vernetzen.</h2>
+    <p class="footer-cta__text">Du findest mich auf LinkedIn.</p>
+    {{ cta_link(meta.linkedin, "Zum LinkedIn Profil") }}
+  </section>
+</main>
