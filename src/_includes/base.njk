@@ -44,7 +44,9 @@
     </div>
   </nav>
 
-  {{ content | safe }}
+  <main>
+    {{ content | safe }}
+  </main>
 
   <footer class="page-footer">
     <a href="{{ impressumUrl }}">{% if isEn %}Legal Notice{% else %}Impressum{% endif %}</a>
