@@ -1215,7 +1215,7 @@ a:hover {
       "intro"
       "image";
     gap: 24px;
-    padding: 90px 22px 40px;
+    padding: 30px 22px 40px;
     align-items: center;
   }
 
@@ -1277,6 +1277,14 @@ a:hover {
 
   .section__title {
     margin-bottom: 32px;
+  }
+
+  main {
+    padding-top: 84px;
+  }
+
+  .hero {
+    padding-top: 24px;
   }
 }
 
