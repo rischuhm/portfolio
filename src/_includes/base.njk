@@ -25,26 +25,27 @@
     {%- set deUrl = page.url | url -%}
     {%- set enUrl = ('/en' + page.url) | url -%}
   {%- endif -%}
+  <a class="skip-link" href="#main-content">{% if isEn %}Skip to content{% else %}Zum Inhalt springen{% endif %}</a>
   <nav class="globalnav" aria-label="Global">
     <div class="globalnav__lang" aria-label="{% if isEn %}Language switcher{% else %}Sprachumschalter{% endif %}">
-      <a class="globalnav__lang-link{% if not isEn %} globalnav__lang-link--active{% endif %}" href="{{ deUrl }}">DE</a>
+      <a class="globalnav__lang-link{% if not isEn %} globalnav__lang-link--active{% endif %}" href="{{ deUrl }}" {% if not isEn %}aria-current="true"{% endif %}>DE</a>
       <span class="globalnav__lang-sep" aria-hidden="true">|</span>
-      <a class="globalnav__lang-link{% if isEn %} globalnav__lang-link--active{% endif %}" href="{{ enUrl }}">EN</a>
+      <a class="globalnav__lang-link{% if isEn %} globalnav__lang-link--active{% endif %}" href="{{ enUrl }}" {% if isEn %}aria-current="true"{% endif %}>EN</a>
     </div>
     <div class="globalnav__content">
       <ul class="globalnav__links">
-        <li><a href="{% if page.url == rootUrl %}#{% else %}{{ rootUrl }}{% endif %}">{% if isEn %}Home{% else %}Start{% endif %}</a></li>
+        <li><a href="{% if page.url == rootUrl %}#{% else %}{{ rootUrl }}{% endif %}" {% if page.url == rootUrl %}aria-current="page"{% endif %}>{% if isEn %}Home{% else %}Start{% endif %}</a></li>
         <li><a href="{{ navPrefix }}#experience">{% if isEn %}Experience{% else %}Erfahrung{% endif %}</a></li>
         <li><a href="{{ navPrefix }}#education">{% if isEn %}Education{% else %}Bildung{% endif %}</a></li>
         <li><a href="{{ navPrefix }}#certifications">{% if isEn %}Certificates{% else %}Zertifikate{% endif %}</a></li>
         <li><a href="{{ navPrefix }}#abroad">{% if isEn %}Abroad{% else %}Ausland{% endif %}</a></li>
         <li><a href="{{ navPrefix }}#languages">{% if isEn %}Languages{% else %}Sprachen{% endif %}</a></li>
-        <li><a href="{{ projectsUrl }}">{% if isEn %}Projects{% else %}Projekte{% endif %}</a></li>
+        <li><a href="{{ projectsUrl }}" {% if page.url == '/projects/' or page.url == '/en/projects/' %}aria-current="page"{% endif %}>{% if isEn %}Projects{% else %}Projekte{% endif %}</a></li>
       </ul>
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     {{ content | safe }}
   </main>
 
