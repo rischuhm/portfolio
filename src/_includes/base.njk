@@ -25,13 +25,12 @@
     {%- set deUrl = page.url | url -%}
     {%- set enUrl = ('/en' + page.url) | url -%}
   {%- endif -%}
-  <div class="lang-switch" aria-label="{% if isEn %}Language switcher{% else %}Sprachumschalter{% endif %}">
-    <a class="lang-switch__link{% if not isEn %} lang-switch__link--active{% endif %}" href="{{ deUrl }}">DE</a>
-    <span class="lang-switch__sep" aria-hidden="true">|</span>
-    <a class="lang-switch__link{% if isEn %} lang-switch__link--active{% endif %}" href="{{ enUrl }}">EN</a>
-  </div>
-
   <nav class="globalnav" aria-label="Global">
+    <div class="globalnav__lang" aria-label="{% if isEn %}Language switcher{% else %}Sprachumschalter{% endif %}">
+      <a class="globalnav__lang-link{% if not isEn %} globalnav__lang-link--active{% endif %}" href="{{ deUrl }}">DE</a>
+      <span class="globalnav__lang-sep" aria-hidden="true">|</span>
+      <a class="globalnav__lang-link{% if isEn %} globalnav__lang-link--active{% endif %}" href="{{ enUrl }}">EN</a>
+    </div>
     <div class="globalnav__content">
       <ul class="globalnav__links">
         <li><a href="{% if page.url == rootUrl %}#{% else %}{{ rootUrl }}{% endif %}">{% if isEn %}Home{% else %}Start{% endif %}</a></li>

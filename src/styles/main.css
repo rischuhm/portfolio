@@ -47,7 +47,7 @@ body {
 
 main {
   flex: 1;
-  padding-top: 32px;
+  padding-top: 84px;
 }
 
 a {
@@ -59,13 +59,24 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Language switcher */
-.lang-switch {
+/* Global Nav */
+.globalnav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 101;
+  z-index: 100;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.globalnav__lang {
   height: 32px;
   display: flex;
   align-items: center;
@@ -76,12 +87,10 @@ a:hover {
   font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--color-text-secondary);
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.lang-switch__link {
+.globalnav__lang-link {
   color: var(--color-text-secondary);
   text-decoration: none;
   padding: 2px 4px;
@@ -89,43 +98,29 @@ a:hover {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.lang-switch__link:hover {
+.globalnav__lang-link:hover {
   color: var(--color-link);
   text-decoration: none;
   background-color: rgba(0, 102, 204, 0.08);
 }
 
-.lang-switch__link--active {
+.globalnav__lang-link--active {
   color: var(--color-text);
   font-weight: 600;
   pointer-events: none;
 }
 
-.lang-switch__sep {
+.globalnav__lang-sep {
   color: var(--color-text-secondary);
   opacity: 0.5;
 }
 
-/* Global Nav */
-.globalnav {
-  position: fixed;
-  top: 32px;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  height: 52px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-}
-
 .globalnav__content {
+  flex: 1;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 22px;
-  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -743,7 +738,6 @@ a:hover {
 
 @media print {
   /* Hide web chrome and marketing elements */
-  .lang-switch,
   .globalnav,
   .footer-cta,
   .page-footer,
