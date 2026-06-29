@@ -13,7 +13,7 @@ layout: base.njk
   <div class="hero__intro">
     <div class="print-only print-header">
       <div class="print-header__image">
-        <img src="/assets/profile.jpg" alt="Portrait von {{ cv.name }}">
+        <img src="{{ '/assets/profile.jpg' | url }}" alt="Portrait von {{ cv.name }}">
       </div>
       <div class="print-header__info">
         <h1 class="print-header__name">{{ cv.name }}</h1>
@@ -60,7 +60,7 @@ layout: base.njk
   </div>
 
   <div class="hero__image">
-    <img src="/assets/profile.jpg" alt="Portrait von {{ cv.name }}">
+    <img src="{{ '/assets/profile.jpg' | url }}" alt="Portrait von {{ cv.name }}">
   </div>
 </header>
 
@@ -221,7 +221,7 @@ layout: base.njk
         {% endfor %}
       </div>
 
-      <p class="print-more-projects"><a href="/projects/">Weitere Projekte auf meiner Webseite</a></p>
+      <p class="print-more-projects"><a href="{{ '/projects/' | url }}">Weitere Projekte auf meiner Webseite</a></p>
     </div>
   </section>
 

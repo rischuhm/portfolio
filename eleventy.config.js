@@ -10,6 +10,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addWatchTarget("src/styles/");
 
   return {
+    pathPrefix: "/portfolio/",
     dir: {
       input: "src",
       output: "_site",

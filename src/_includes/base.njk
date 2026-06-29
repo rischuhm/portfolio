@@ -7,21 +7,21 @@
   <meta name="description" content="{{ cv.summary }}">
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="/styles/bootstrap-icons/bootstrap-icons.css">
-  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="{{ '/styles/bootstrap-icons/bootstrap-icons.css' | url }}">
+  <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
 </head>
 <body>
-  {% set navPrefix = "" if page.url == "/" else "/" %}
+  {% set navPrefix = "" if page.url == "/" else ("/" | url) %}
   <nav class="globalnav" aria-label="Global">
     <div class="globalnav__content">
       <ul class="globalnav__links">
-        <li><a href="{% if page.url == '/' %}#{% else %}/{% endif %}">Start</a></li>
+        <li><a href="{% if page.url == '/' %}#{% else %}{{ '/' | url }}{% endif %}">Start</a></li>
         <li><a href="{{ navPrefix }}#experience">Erfahrung</a></li>
         <li><a href="{{ navPrefix }}#education">Bildung</a></li>
         <li><a href="{{ navPrefix }}#certifications">Zertifikate</a></li>
         <li><a href="{{ navPrefix }}#abroad">Ausland</a></li>
         <li><a href="{{ navPrefix }}#languages">Sprachen</a></li>
-        <li><a href="/projects/">Projekte</a></li>
+        <li><a href="{{ '/projects/' | url }}">Projekte</a></li>
       </ul>
     </div>
   </nav>
@@ -29,9 +29,9 @@
   {{ content | safe }}
 
   <footer class="page-footer">
-    <a href="/impressum/">Impressum</a>
+    <a href="{{ '/impressum/' | url }}">Impressum</a>
     <span aria-hidden="true">·</span>
-    <a href="/datenschutz/">Datenschutz</a>
+    <a href="{{ '/datenschutz/' | url }}">Datenschutz</a>
   </footer>
 
   <button class="back-to-top" type="button" aria-label="Zum Seitenanfang">
