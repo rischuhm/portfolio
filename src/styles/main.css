@@ -72,8 +72,6 @@ a:hover {
   justify-content: flex-end;
   gap: 6px;
   padding: 0 22px;
-  max-width: var(--max-width);
-  margin: 0 auto;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: -0.01em;
