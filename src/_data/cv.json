@@ -16,18 +16,22 @@
           "role": "DevOps Consultant",
           "company": "XALT",
           "tasks": [
-            "Kundenberatung zu Kollaborations- und Projektmanagement-Tools",
-            "Coaching und Training zu agilem Arbeiten"
+            "Aufbau und Optimierung von CI/CD-Pipelines und Infrastructure-as-Code-Lösungen für Kunden aus Banken-, Versicherungs- und Energiesektor",
+            "Tool-Migrationen (z. B. Zephyr → Xray, Opsgenie → JSM Operations) nahtlos in Atlassian-Ökosysteme integriert",
+            "Bankenprojekt: Transition von Scrum zu Kanban gesteuert – Meeting-Aufwand und Teilnehmerzahl reduziert, ca. 500.000 € jährlich eingespart",
+            "Versicherungsprojekt: Tool-Migration mit ca. 40 % Einsparung der jährlichen Lizenzkosten und beschleunigte Arbeitsabläufe durch direkte Atlassian-Integration",
+            "Leitung der internen Atlassian On-Premise-zu-Cloud-Migration bei XALT: operativer Overhead reduziert und Wartungsaufwand gesenkt",
+            "Forschung und Entwicklung lokaler KI-Lösungen mit llama.cpp sowie Harnesses wie Hermes und OpenClaw – KI-Einsatz in datenschutzsensiblen und restriktiven Umgebungen ohne Cloud-Abhängigkeit ermöglicht"
           ]
         },
         {
           "period": "06.2023 – 04.2025",
-          "role": "Scrum Master",
+          "role": "Agile Coach",
           "company": "Webfleet Solutions Development",
           "tasks": [
-            "Schulung internationaler Teams zu agiler Arbeitsweise",
-            "Zielgerichtete Moderation von Dailies und Retrospektiven in Remote-Teams",
-            "Trainings zu Kommunikation, insbesondere Gewaltfreie Kommunikation"
+            "Moderation zentraler agiler Events (Dailies, 1:1s, Retrospektiven) für ein vollständig in Europa verteiltes Team",
+            "Workshops zur Identifikation von Bottlenecks und Prozessvisualisierung mit BPMN 2.0 – Arbeitsabläufe standardisiert und Effizienz gesteigert",
+            "Anwendung der 3M-Philosophie aus dem Toyota Production System (Muda, Mura, Muri): Verschwendung reduziert, Lasten gleichmäßiger verteilt und Prozesse stabilisiert"
           ]
         },
         {
@@ -35,10 +39,11 @@
           "role": "DevOps Engineer",
           "company": "Webfleet Solutions Development",
           "tasks": [
-            "Wartung und Upgrade von Cloudanwendungen",
-            "Bearbeitung und Umsetzung von Nutzeranfragen",
-            "Prozessautomatisierung",
-            "Unterstützung bei Cloudmigration"
+            "Betreuung von Deployment-Anfragen mit Fokus auf Resource Right-Sizing – Kosten optimiert und Performance stabilisiert",
+            "Skalierung von Anwendungen über ein Multi-Cluster-Setup (Alpha, Dev, Stage, Prod) mit Rancher und ArgoCD",
+            "Umstellung der Deployment-Strategie von Trunk-Based auf GitOps: Redundanzen reduziert und Änderungen klarer getrennt",
+            "Cloud-Kostenoptimierung durch bessere Storage-Optionen, Bereinigung ungenutzter Ressourcen und konsequentes Right-Sizing",
+            "Unterstützung der Cloudmigration von Azure zu AWS: Migration in 9 statt 12 Monaten abgeschlossen, Stabilität der bestehenden Azure-Infrastruktur sichergestellt"
           ]
         },
         {
@@ -46,9 +51,9 @@
           "role": "DevOps Engineer",
           "company": "Deutsche Telekom Technik",
           "tasks": [
-            "Automatisierung und Orchestrierung von Serveranwendungen",
-            "Training von Kollegen in Programmierung",
-            "Serverwartung und Troubleshooting"
+            "Unterstützung beim Release einer Low-Code-Lösung auf Basis von resolve.io",
+            "Server-Hardening und Ausbau des Monitorings mit Prometheus/Grafana für mehr Betriebssicherheit",
+            "Inhouse-Workshops zu Programmierlogik und Datenstrukturen für Operatoren – Zusammenarbeit mit Entwicklern effizienter gestaltet und Silos reduziert"
           ]
         },
         {
@@ -56,17 +61,21 @@
           "role": "Dualer Student",
           "company": "T-Systems International Leipzig",
           "tasks": [
-            "Routing und Switching div. Kundenprojekte",
-            "Prozessautomatisierung durch eigens entwickelte WebApp",
-            "Anwendungsentwicklung",
-            "Training anderer Studenten im Arbeitsprozess"
+            "Aufbau und Leitung eines studentischen Entwicklerteams (3 Personen) mit agiler Kanban-Planung",
+            "Greenfield-Entwicklung einer WebApp zur Automatisierung von Netzwerkprozessen: Ruleset-Exports, Zertifikatserneuerung und Change Requests",
+            "CI/CD von GitHub bis Kubernetes: vollautomatische Deployments und Reduktion manueller Prozesse von Tagen auf Sekunden",
+            "Lösung wurde nach dem Studium mindestens drei Jahre produktiv genutzt"
           ]
         },
         {
           "period": "06.2018 – 12.2021",
-          "role": "Freiberuflicher Dozent",
-          "company": "Deutsch, Mathematik und Informatik in Gruppen- und Einzelunterricht",
-          "tasks": []
+          "role": "Dozent",
+          "company": "Selbstständig",
+          "tasks": [
+            "Sprachcoaching Deutsch als Fremdsprache: Lernende erreichten B1-Niveau in einem Drittel der regulären Kursdauer",
+            "IT-Weiterbildung: Manuelle Prozesse, die zuvor Tage dauerten, durch Automatisierung auf Sekunden reduziert",
+            "Praxisnaher Einzel- und Gruppenunterricht in Deutsch, Mathematik und Informatik, zielgerichtet auf berufliche Herausforderungen"
+          ]
         }
       ]
     },
@@ -78,15 +87,15 @@
           "period": "10.2018 – 12.2021",
           "role": "Duales Studium B.Sc. Wirtschaftsinformatik – Business Information Systems",
           "company": "FOM Leipzig",
+          "grade": "2.1",
+          "thesis": "Facilitating agile work culture through the automation of computer network related processes",
           "tasks": []
         },
         {
           "period": "08.2016 – 10.2018",
           "role": "Studium B.A. Lehramt Grundschulpädagogik (abgebrochen)",
           "company": "FU Berlin",
-          "tasks": [
-            "Fächer: Deutsch, Mathematik und NaWi"
-          ]
+          "tasks": []
         }
       ]
     },
@@ -115,11 +124,13 @@
         {
           "period": "08.2014 – 08.2016",
           "role": "IJFD über das DRK in Haifa, Israel",
-          "company": "",
+          "company": "Beit Rutenberg Institute",
           "tasks": [
-            "Vor- und Nachbereitung von Unterrichtseinheiten",
-            "Übernahme einiger Unterrichtsstunden",
-            "Unterstützung der Schüler bei Abschlussprojekten"
+            "Unterricht in Filmtheorie: eigenverantwortliche Vorbereitung von Unterrichtseinheiten und Lernmaterialien",
+            "Verwaltung professioneller Film- und Audioaufnahmeequipment: Ausleihe an Studierende organisiert und Inventar regelmäßig geprüft",
+            "Technische Betreuung von Audio- und Videoanlagen während Institutsveranstaltungen",
+            "Unterstützung bei Buchung und Betreuung des angeschlossenen Gästehauses",
+            "Neuaufbau der Website für Institut und Gästehaus auf WordPress-Basis: Informationen besser auffindbar und Buchungsprozess vereinfacht"
           ]
         }
       ]

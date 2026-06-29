@@ -11,6 +11,23 @@ layout: base.njk
 
 <header class="hero">
   <div class="hero__intro">
+    <div class="print-only print-header">
+      <div class="print-header__image">
+        <img src="/assets/profile.jpg" alt="Portrait von {{ cv.name }}">
+      </div>
+      <div class="print-header__info">
+        <h1 class="print-header__name">{{ cv.name }}</h1>
+        <p class="print-header__title">{{ cv.title }}</p>
+        <ul class="print-header__contact">
+          <li><strong>Geboren:</strong> {{ cv.birth }}</li>
+          <li><strong>Anschrift:</strong> {{ cv.location }}</li>
+          <li><strong>Telefon:</strong> {{ cv.phone }}</li>
+          <li><strong>E-Mail:</strong> {{ cv.email }}</li>
+          <li><strong>LinkedIn:</strong> {{ meta.linkedin }}</li>
+        </ul>
+      </div>
+    </div>
+
     <h1 class="hero__name" aria-label="{{ cv.name }}">
       <svg class="name-trick" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
         <defs>
@@ -37,9 +54,9 @@ layout: base.njk
       </a>
     </div>
 
-    <a class="cta-button" href="/assets/Lebenslauf%20Richard_Richter%20Lehramt.pdf" download>
-      <i class="bi bi-download" aria-hidden="true"></i> Lebenslauf herunterladen
-    </a>
+    <button class="cta-button" type="button" onclick="window.print()">
+      <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Lebenslauf als PDF
+    </button>
   </div>
 
   <div class="hero__image">
@@ -88,6 +105,12 @@ layout: base.njk
               <span class="tile__period">{{ item.period }}</span>
               <h3 class="tile__title">{{ item.role }}</h3>
               <p class="tile__company">{{ item.company }}</p>
+              {% if item.grade %}
+                <p class="tile__grade">Abschlussnote: {{ item.grade }}</p>
+              {% endif %}
+              {% if item.thesis %}
+                <p class="tile__thesis">Thesis: {{ item.thesis }}</p>
+              {% endif %}
             </div>
             {% if item.tasks.length %}
               <div class="tile__body">
@@ -171,9 +194,35 @@ layout: base.njk
     </div>
   </section>
 
-  <section class="footer-cta" id="contact">
-    <h2 class="footer-cta__title">Lass uns vernetzen.</h2>
-    <p class="footer-cta__text">Du findest mich auf LinkedIn.</p>
-    {{ cta_link(meta.linkedin, "Zum LinkedIn Profil") }}
+  <section class="section print-only" id="projects-print">
+    <div class="section__content">
+      <p class="section__eyebrow">{{ projects.eyebrow }}</p>
+      <h2 class="section__title">Projekte</h2>
+
+      <div class="tile-grid">
+        {% for project in projects.items %}
+          {% if loop.index <= 3 %}
+            <article class="tile">
+              <div class="tile__head">
+                <span class="tile__period">{{ project.period }}</span>
+                <h3 class="tile__title">{{ project.title }}</h3>
+                <p class="tile__company">{{ project.sector }}</p>
+              </div>
+              <div class="tile__body">
+                <p class="tile__summary">{{ project.summary }}</p>
+                <ul class="tile__tasks">
+                  {% for highlight in project.highlights %}
+                    <li>{{ highlight }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <p class="print-more-projects"><a href="/projects/">Weitere Projekte auf meiner Webseite</a></p>
+    </div>
   </section>
+
 </main>

@@ -1,0 +1,85 @@
+{
+  "eyebrow": "Persönliche Projekte",
+  "title": "Projekte",
+  "intro": "Neben der Beratertätigkeit arbeite ich kontinuierlich an eigenen Projekten – von lokaler KI über Hardware-Automation bis hin zu modernen Webseiten. Damit erprobe ich neue Technologien praxisnah und löse komplexe Problemstellungen eigenständig von der Idee bis zur Umsetzung.",
+  "items": [
+    {
+      "title": "Persönliche Portfolio-Seite",
+      "sector": "Web / DevEx",
+      "period": "06.2026",
+      "role": "Solo-Entwickler",
+      "summary": "Aufbau dieser persönlichen Portfolio-Seite mit 11ty: Lebenslauf direkt aus dem Code pflegbar, mit nativem PDF-Export der aktuellen CV für Recruiter und klarer Trennung von Inhalt und Darstellung.",
+      "highlights": [
+        "Content-gestriebene Architektur über JSON und Nunjucks-Templates",
+        "Nativer PDF-Export der aktuellen CV über Browser-Print-to-PDF",
+        "Einfache Wartbarkeit und Erweiterbarkeit durch statischen Site-Generator"
+      ],
+      "tags": ["11ty", "Nunjucks", "CSS", "Print-to-PDF", "Developer Experience"]
+    },
+    {
+      "title": "Automatischer Gästezähler",
+      "sector": "IoT / Hardware",
+      "period": "05.2026 – laufend",
+      "role": "Solo-Entwickler",
+      "summary": "Design und Realisierung eines automatischen Gästezählers mit Mikrocontroller und Lichtschranke – von der Konstruktion über manuelle Hardwarebearbeitung bis zur fertigen Lösung mit KI-gestützten Tools.",
+      "highlights": [
+        "End-to-End-Entwicklung von Hardware und Software",
+        "Entlastung des Türpersonals durch automatische Zählung",
+        "Echtzeit-Erfassung verlässlicher Gästezahlen zur besseren Planung"
+      ],
+      "tags": ["IoT", "Mikrocontroller", "Hardware", "Embedded", "KI-gestützte Entwicklung"]
+    },
+    {
+      "title": "Website-Relaunch für eine lokale Köchin",
+      "sector": "Web / Prozessautomatisierung",
+      "period": "05.2026 – laufend",
+      "role": "Solo-Entwickler",
+      "summary": "Relaunch der Website einer lokalen Köchin mit 11ty als statischer Seite: Reservierungsprozesse automatisiert, User Experience verbessert und die Angriffsfläche gegenüber einer SPA deutlich reduziert.",
+      "highlights": [
+        "Migration von einer SPA zu einer schnellen, statischen 11ty-Seite",
+        "Automatisierung des Reservierungsprozesses",
+        "Verbesserte UX bei gleichzeitig weniger Sicherheitsrisiken"
+      ],
+      "tags": ["11ty", "Static Sites", "UX", "Webdesign", "Prozessautomatisierung"]
+    },
+    {
+      "title": "Privater, lokal betriebener KI-Agent",
+      "sector": "Künstliche Intelligenz / Automation",
+      "period": "01.2026 – laufend",
+      "role": "Solo-Entwickler",
+      "summary": "Aufbau eines persönlichen KI-Agents auf Basis von Hermes und llama.cpp zur Organisation und Automatisierung des Alltags – als datenschutzfreundliche Alternative zu cloudbasierten Diensten.",
+      "highlights": [
+        "Lokale LLM-Runtime mit llama.cpp statt Cloud-APIs",
+        "Integration von Hermes für strukturierte Aufgabenautomatisierung",
+        "Fokus auf Datensouveränität und Reduktion externer Abhängigkeiten"
+      ],
+      "tags": ["llama.cpp", "Hermes", "Local AI", "Python", "Automation"]
+    },
+    {
+      "title": "Pi-hole auf Raspberry Pi Zero",
+      "sector": "Home Lab / Netzwerk",
+      "period": "03.2025 – laufend",
+      "role": "Solo-Entwickler",
+      "summary": "Aufbau eines werbefreien und sichereren Heimnetzwerks für die Familie mit Pi-hole auf einem Raspberry Pi Zero – blockiert Werbung und schützt vor bösartigen Domains auf DNS-Ebene.",
+      "highlights": [
+        "Einrichtung und kontinuierlicher Betrieb von Pi-hole auf Raspberry Pi Zero",
+        "Netzwerkweite Blockierung von Werbung und Tracking-Domains",
+        "Schutz vor bösartigen Webseiten durch zentralen DNS-Filter"
+      ],
+      "tags": ["Raspberry Pi", "Pi-hole", "DNS", "Netzwerk", "Home Lab"]
+    },
+    {
+      "title": "Telegram-Bot für Community-Events",
+      "sector": "Automation / Community",
+      "period": "01.2025 – 03.2025",
+      "role": "Solo-Entwickler",
+      "summary": "Entwicklung eines Telegram-Bots für Community-Projekte zur Automatisierung von Reservierungen sowie Gäste- und Wartelisten für Events mit begrenzten Plätzen – ersetzt das bisherige First-Come-First-Serve-Verfahren durch eine fairste Vergabe.",
+      "highlights": [
+        "Automatisierte Reservierungen über Telegram",
+        "Verwaltung von Gäste- und Wartelisten für limitierte Events",
+        "Fairste Vergabe begrenzter Plätze statt reiner Schnelligkeit"
+      ],
+      "tags": ["Telegram Bot", "Python", "Automation", "Community"]
+    }
+  ]
+}
