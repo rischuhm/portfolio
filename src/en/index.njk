@@ -1,0 +1,228 @@
+---
+layout: base.njk
+---
+
+{% macro cta_link(url, text) %}
+  <a class="cta-link" href="{{ url }}" target="_blank" rel="noopener">
+    {{ text }}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  </a>
+{% endmacro %}
+
+<header class="hero">
+  <div class="hero__intro">
+    <div class="print-only print-header">
+      <div class="print-header__image">
+        <img src="{{ '/assets/profile.jpg' | url }}" alt="Portrait of {{ cv.name }}">
+      </div>
+      <div class="print-header__info">
+        <h1 class="print-header__name">{{ cv.name }}</h1>
+        <p class="print-header__title">{{ cv.title }}</p>
+        <ul class="print-header__contact">
+          <li><strong>Born:</strong> {{ cv.birth }}</li>
+          <li><strong>Address:</strong> {{ cv.location }}</li>
+          <li><strong>Phone:</strong> {{ cv.phone }}</li>
+          <li><strong>Email:</strong> {{ cv.email }}</li>
+          <li><strong>LinkedIn:</strong> {{ meta.linkedin }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <h1 class="hero__name" aria-label="{{ cv.name }}">
+      <svg class="name-trick" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <defs>
+          <linearGradient id="nameGradient" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#000000" />
+            <stop offset="100%" stop-color="#9a9a9a" />
+          </linearGradient>
+        </defs>
+        <g transform="translate(90, 0)">
+          <text class="name-trick__rich" x="0" y="230" fill="url(#nameGradient)">RICH</text>
+          <text class="name-trick__suffix name-trick__suffix--top" x="630" y="110" fill="url(#nameGradient)">ard</text>
+          <text class="name-trick__suffix name-trick__suffix--bottom" x="630" y="230" fill="url(#nameGradient)">ter</text>
+        </g>
+      </svg>
+    </h1>
+    <p class="hero__title">{{ cv.title }}</p>
+
+    <div class="hero__ctas">
+      <a class="cta-icon" href="{{ meta.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+        <i class="bi bi-linkedin" aria-hidden="true"></i>
+      </a>
+      <a class="cta-icon" href="#" target="_blank" rel="noopener" aria-label="GitHub Profile">
+        <i class="bi bi-github" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <button class="cta-button" type="button" onclick="window.print()">
+      <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> CV as PDF
+    </button>
+  </div>
+
+  <div class="hero__image">
+    <img src="{{ '/assets/profile.jpg' | url }}" alt="Portrait of {{ cv.name }}">
+  </div>
+</header>
+
+<main>
+  <section class="section" id="experience">
+    <div class="section__content">
+      <p class="section__eyebrow">Work Experience</p>
+      <h2 class="section__title">From the classroom to the cloud.</h2>
+
+      <div class="tile-grid">
+        {% for item in cv.sections[0].items %}
+          <article class="tile {% if loop.index0 % 2 == 1 %}tile--dark{% endif %}">
+            <div class="tile__head">
+              <span class="tile__period">{{ item.period }}</span>
+              <h3 class="tile__title">{{ item.role }}</h3>
+              <p class="tile__company">{{ item.company }}</p>
+            </div>
+            {% if item.tasks.length %}
+              <div class="tile__body">
+                <ul class="tile__tasks">
+                  {% for task in item.tasks %}
+                    <li>{{ task }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--secondary" id="education">
+    <div class="section__content">
+      <p class="section__eyebrow">Education</p>
+      <h2 class="section__title">Where business informatics meets pedagogy.</h2>
+
+      <div class="tile-grid">
+        {% for item in cv.sections[1].items %}
+          <article class="tile">
+            <div class="tile__head">
+              <span class="tile__period">{{ item.period }}</span>
+              <h3 class="tile__title">{{ item.role }}</h3>
+              <p class="tile__company">{{ item.company }}</p>
+              {% if item.grade %}
+                <p class="tile__grade">Final grade: {{ item.grade }}</p>
+              {% endif %}
+              {% if item.thesis %}
+                <p class="tile__thesis">Thesis: {{ item.thesis }}</p>
+              {% endif %}
+            </div>
+            {% if item.tasks.length %}
+              <div class="tile__body">
+                <ul class="tile__tasks">
+                  {% for task in item.tasks %}
+                    <li>{{ task }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="certifications">
+    <div class="section__content">
+      <p class="section__eyebrow">Certifications</p>
+      <h2 class="section__title">Trained. Certified.</h2>
+
+      <ul class="simple-list">
+        {% for item in cv.sections[2].items %}
+          <li class="simple-list__item">
+            <p class="simple-list__label">{{ item.role }}</p>
+            <p class="simple-list__meta">{{ item.period }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="abroad">
+    <div class="section__content">
+      <p class="section__eyebrow">International Experience</p>
+      <h2 class="section__title">Two years in Israel.</h2>
+
+      <article class="tile tile--wide tile--dark">
+        <div class="tile__head">
+          <span class="tile__period">{{ cv.sections[3].items[0].period }}</span>
+          <h3 class="tile__title">{{ cv.sections[3].items[0].role }}</h3>
+        </div>
+        <div class="tile__body">
+          <ul class="tile__tasks">
+            {% for task in cv.sections[3].items[0].tasks %}
+              <li>{{ task }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--secondary" id="languages">
+    <div class="section__content">
+      <p class="section__eyebrow">Languages</p>
+      <h2 class="section__title">Communication at eye level.</h2>
+
+      <ul class="simple-list">
+        {% for item in cv.sections[4].items %}
+          <li class="simple-list__item">
+            <p class="simple-list__label">{{ item.role }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="other">
+    <div class="section__content">
+      <p class="section__eyebrow">Other</p>
+      <h2 class="section__title">The little extra.</h2>
+
+      <ul class="simple-list">
+        {% for item in cv.sections[5].items %}
+          <li class="simple-list__item">
+            <p class="simple-list__label">{{ item.role }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section print-only" id="projects-print">
+    <div class="section__content">
+      <p class="section__eyebrow">{{ projects.eyebrow }}</p>
+      <h2 class="section__title">Projects</h2>
+
+      <div class="tile-grid">
+        {% for project in projects.items %}
+          {% if loop.index <= 3 %}
+            <article class="tile">
+              <div class="tile__head">
+                <span class="tile__period">{{ project.period }}</span>
+                <h3 class="tile__title">{{ project.title }}</h3>
+                <p class="tile__company">{{ project.sector }}</p>
+              </div>
+              <div class="tile__body">
+                <p class="tile__summary">{{ project.summary }}</p>
+                <ul class="tile__tasks">
+                  {% for highlight in project.highlights %}
+                    <li>{{ highlight }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <p class="print-more-projects"><a href="https://rischuhm.github.io/portfolio/en/projects/">More projects on my website</a></p>
+    </div>
+  </section>
+
+</main>

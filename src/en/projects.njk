@@ -1,0 +1,45 @@
+---
+layout: base.njk
+title: Latest Projects
+---
+
+<section class="section" id="projects">
+  <div class="section__content">
+    <p class="section__eyebrow">{{ projects.eyebrow }}</p>
+    <h1 class="section__title">{{ projects.title }}</h1>
+    <p class="section__lead">{{ projects.intro }}</p>
+
+    <div class="project-grid">
+      {% for project in projects.items %}
+        <article class="project-card">
+          <div class="project-card__head">
+            <div class="project-card__meta">
+              <span class="project-card__period">{{ project.period }}</span>
+              <span class="project-card__sector">{{ project.sector }}</span>
+            </div>
+            <h2 class="project-card__title">{{ project.title }}</h2>
+            <p class="project-card__role">{{ project.role }}</p>
+          </div>
+
+          <p class="project-card__summary">{{ project.summary }}</p>
+
+          {% if project.highlights.length %}
+            <ul class="project-card__highlights">
+              {% for highlight in project.highlights %}
+                <li>{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+          {% if project.tags.length %}
+            <div class="project-card__tags">
+              {% for tag in project.tags %}
+                <span class="project-card__tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

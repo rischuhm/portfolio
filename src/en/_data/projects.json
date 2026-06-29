@@ -1,0 +1,85 @@
+{
+  "eyebrow": "Personal Projects",
+  "title": "Projects",
+  "intro": "Alongside my consulting work, I continuously work on personal projects – from local AI and hardware automation to modern websites. This lets me try out new technologies hands-on and solve complex problems independently from idea to implementation.",
+  "items": [
+    {
+      "title": "Personal Portfolio Website",
+      "sector": "Web / DevEx",
+      "period": "06.2026",
+      "role": "Solo Developer",
+      "summary": "Built this personal portfolio site with 11ty: CV maintainable directly from code, with native PDF export of the current CV for recruiters and clear separation of content and presentation.",
+      "highlights": [
+        "Content-driven architecture via JSON and Nunjucks templates",
+        "Native PDF export of the current CV through browser print-to-PDF",
+        "Easy maintainability and extensibility through static site generator"
+      ],
+      "tags": ["11ty", "Nunjucks", "CSS", "Print-to-PDF", "Developer Experience"]
+    },
+    {
+      "title": "Automatic Guest Counter",
+      "sector": "IoT / Hardware",
+      "period": "05.2026 – ongoing",
+      "role": "Solo Developer",
+      "summary": "Design and realization of an automatic guest counter with microcontroller and light barrier – from construction and manual hardware processing to the final solution using AI-assisted tools.",
+      "highlights": [
+        "End-to-end development of hardware and software",
+        "Relieved door staff through automatic counting",
+        "Real-time capture of reliable guest numbers for better planning"
+      ],
+      "tags": ["IoT", "Microcontroller", "Hardware", "Embedded", "AI-assisted Development"]
+    },
+    {
+      "title": "Website Relaunch for a Local Chef",
+      "sector": "Web / Process Automation",
+      "period": "05.2026 – ongoing",
+      "role": "Solo Developer",
+      "summary": "Relaunch of a local chef’s website with 11ty as a static site: automated reservation processes, improved user experience, and significantly reduced attack surface compared to a SPA.",
+      "highlights": [
+        "Migration from a SPA to a fast, static 11ty site",
+        "Automation of the reservation process",
+        "Improved UX with fewer security risks"
+      ],
+      "tags": ["11ty", "Static Sites", "UX", "Webdesign", "Process Automation"]
+    },
+    {
+      "title": "Private, Locally Hosted AI Agent",
+      "sector": "Artificial Intelligence / Automation",
+      "period": "01.2026 – ongoing",
+      "role": "Solo Developer",
+      "summary": "Built a personal AI agent based on Hermes and llama.cpp to organize and automate everyday tasks – as a privacy-friendly alternative to cloud-based services.",
+      "highlights": [
+        "Local LLM runtime with llama.cpp instead of cloud APIs",
+        "Integration of Hermes for structured task automation",
+        "Focus on data sovereignty and reducing external dependencies"
+      ],
+      "tags": ["llama.cpp", "Hermes", "Local AI", "Python", "Automation"]
+    },
+    {
+      "title": "Pi-hole on Raspberry Pi Zero",
+      "sector": "Home Lab / Networking",
+      "period": "03.2025 – ongoing",
+      "role": "Solo Developer",
+      "summary": "Set up an ad-free and more secure home network for the family with Pi-hole on a Raspberry Pi Zero – blocks ads and protects against malicious domains at DNS level.",
+      "highlights": [
+        "Setup and continuous operation of Pi-hole on Raspberry Pi Zero",
+        "Network-wide blocking of ads and tracking domains",
+        "Protection against malicious websites through central DNS filter"
+      ],
+      "tags": ["Raspberry Pi", "Pi-hole", "DNS", "Networking", "Home Lab"]
+    },
+    {
+      "title": "Telegram Bot for Community Events",
+      "sector": "Automation / Community",
+      "period": "01.2025 – 03.2025",
+      "role": "Solo Developer",
+      "summary": "Developed a Telegram bot for community projects to automate reservations as well as guest and waiting lists for events with limited seats – replacing the previous first-come-first-serve approach with a fairer allocation.",
+      "highlights": [
+        "Automated reservations via Telegram",
+        "Management of guest and waiting lists for limited events",
+        "Fairer allocation of limited seats instead of pure speed"
+      ],
+      "tags": ["Telegram Bot", "Python", "Automation", "Community"]
+    }
+  ]
+}

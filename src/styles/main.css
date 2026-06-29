@@ -47,6 +47,7 @@ body {
 
 main {
   flex: 1;
+  padding-top: 32px;
 }
 
 a {
@@ -58,10 +59,59 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Language switcher */
+.lang-switch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 0 22px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-text-secondary);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.lang-switch__link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.lang-switch__link:hover {
+  color: var(--color-link);
+  text-decoration: none;
+  background-color: rgba(0, 102, 204, 0.08);
+}
+
+.lang-switch__link--active {
+  color: var(--color-text);
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.lang-switch__sep {
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
 /* Global Nav */
 .globalnav {
   position: fixed;
-  top: 0;
+  top: 32px;
   left: 0;
   right: 0;
   z-index: 100;
@@ -695,6 +745,7 @@ a:hover {
 
 @media print {
   /* Hide web chrome and marketing elements */
+  .lang-switch,
   .globalnav,
   .footer-cta,
   .page-footer,

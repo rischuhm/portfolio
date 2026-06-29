@@ -1,0 +1,169 @@
+{
+  "name": "Richard Richter",
+  "title": "DevOps and AI Consultant",
+  "birth": "16.07.1994 in Potsdam",
+  "location": "Blumenstr. 15, 04105 Leipzig",
+  "phone": "0176 436 900 96",
+  "email": "rich.richter94@gmail.com",
+  "summary": "DevOps Engineer and Scrum Master with experience in cloud migration, process automation, and agile team leadership in international remote teams.",
+  "sections": [
+    {
+      "id": "experience",
+      "title": "Work Experience",
+      "items": [
+        {
+          "period": "05.2025 – present",
+          "role": "DevOps Consultant",
+          "company": "XALT",
+          "tasks": [
+            "Built and optimized CI/CD pipelines and Infrastructure-as-Code solutions for clients in banking, insurance, and energy",
+            "Tool migrations (e.g. Zephyr → Xray, Opsgenie → JSM Operations) seamlessly integrated into Atlassian ecosystems",
+            "Banking project: Led the transition from Scrum to Kanban – reduced meeting effort and attendance, saving approx. €500,000 per year",
+            "Insurance project: Tool migration with approx. 40 % reduction in annual license costs and faster workflows through direct Atlassian integration",
+            "Led XALT’s internal Atlassian on-premise-to-cloud migration: reduced operational overhead and maintenance effort",
+            "Research and development of local AI solutions with llama.cpp and harnesses such as Hermes and OpenClaw – enabling AI use in privacy-sensitive and restrictive environments without cloud dependency"
+          ]
+        },
+        {
+          "period": "06.2023 – 04.2025",
+          "role": "Agile Coach",
+          "company": "Webfleet Solutions Development",
+          "tasks": [
+            "Facilitated core agile events (dailies, 1:1s, retrospectives) for a fully Europe-distributed team",
+            "Workshops to identify bottlenecks and process visualization with BPMN 2.0 – standardized workflows and increased efficiency",
+            "Applied the 3M philosophy from the Toyota Production System (Muda, Mura, Muri): reduced waste, balanced workload, and stabilized processes"
+          ]
+        },
+        {
+          "period": "11.2022 – 04.2025",
+          "role": "DevOps Engineer",
+          "company": "Webfleet Solutions Development",
+          "tasks": [
+            "Supported deployment requests with focus on resource right-sizing – optimized costs and stabilized performance",
+            "Scaled applications across a multi-cluster setup (Alpha, Dev, Stage, Prod) with Rancher and ArgoCD",
+            "Shifted deployment strategy from trunk-based to GitOps: reduced redundancy and separated changes more clearly",
+            "Cloud cost optimization through better storage options, cleanup of unused resources, and consistent right-sizing",
+            "Supported cloud migration from Azure to AWS: completed migration in 9 instead of 12 months while maintaining stability of existing Azure infrastructure"
+          ]
+        },
+        {
+          "period": "01.2022 – 10.2022",
+          "role": "DevOps Engineer",
+          "company": "Deutsche Telekom Technik",
+          "tasks": [
+            "Supported the release of a low-code solution based on resolve.io",
+            "Server hardening and expansion of monitoring with Prometheus/Grafana for improved operational reliability",
+            "In-house workshops on programming logic and data structures for operators – improved collaboration with developers and reduced silos"
+          ]
+        },
+        {
+          "period": "10.2018 – 12.2021",
+          "role": "Dual Student",
+          "company": "T-Systems International Leipzig",
+          "tasks": [
+            "Built and led a student development team (3 people) with agile Kanban planning",
+            "Greenfield development of a web app to automate network processes: ruleset exports, certificate renewals, and change requests",
+            "CI/CD from GitHub to Kubernetes: fully automated deployments and reduction of manual processes from days to seconds",
+            "Solution remained in productive use for at least three years after graduation"
+          ]
+        },
+        {
+          "period": "06.2018 – 12.2021",
+          "role": "Freelance Instructor",
+          "company": "Self-employed",
+          "tasks": [
+            "German-as-a-foreign-language coaching: learners reached B1 level in one third of the regular course duration",
+            "IT training: manual processes that previously took days reduced to seconds through automation",
+            "Practical individual and group lessons in German, mathematics, and computer science, tailored to professional challenges"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "items": [
+        {
+          "period": "10.2018 – 12.2021",
+          "role": "Dual B.Sc. Business Information Systems",
+          "company": "FOM Leipzig",
+          "grade": "2.1",
+          "thesis": "Facilitating agile work culture through the automation of computer network related processes",
+          "tasks": []
+        },
+        {
+          "period": "08.2016 – 10.2018",
+          "role": "B.A. Primary School Education (discontinued)",
+          "company": "FU Berlin",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "certifications",
+      "title": "Certifications",
+      "items": [
+        {
+          "period": "01.2025",
+          "role": "Scrum Master Yellow Belt",
+          "company": "",
+          "tasks": []
+        },
+        {
+          "period": "11.2022",
+          "role": "Azure Fundamentals AZ-900",
+          "company": "",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "abroad",
+      "title": "International Experience",
+      "items": [
+        {
+          "period": "08.2014 – 08.2016",
+          "role": "International Youth Volunteer Service via DRK in Haifa, Israel",
+          "company": "Beit Rutenberg Institute",
+          "tasks": [
+            "Taught film theory: independently prepared lessons and learning materials",
+            "Managed professional film and audio recording equipment: organized loans to students and regularly checked inventory",
+            "Technical support for audio and video equipment during institute events",
+            "Assisted with booking and management of the affiliated guesthouse",
+            "Rebuilt the website for institute and guesthouse on WordPress: improved information findability and simplified booking process"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "languages",
+      "title": "Languages",
+      "items": [
+        {
+          "period": "",
+          "role": "German C2 (native)",
+          "company": "",
+          "tasks": []
+        },
+        {
+          "period": "",
+          "role": "English C1",
+          "company": "",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "title": "Other",
+      "items": [
+        {
+          "period": "",
+          "role": "Class B driver's license",
+          "company": "",
+          "tasks": []
+        }
+      ]
+    }
+  ]
+}

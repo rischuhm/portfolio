@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
+{%- set isEn = page.url.startsWith('/en/') -%}
+{%- set lang = 'en' if isEn else 'de' -%}
+{%- set rootUrl = '/en/' | url if isEn else '/' | url -%}
+{%- set projectsUrl = '/en/projects/' | url if isEn else '/projects/' | url -%}
+{%- set impressumUrl = '/en/impressum/' | url if isEn else '/impressum/' | url -%}
+{%- set datenschutzUrl = '/en/datenschutz/' | url if isEn else '/datenschutz/' | url -%}
+<html lang="{{ lang }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,17 +17,30 @@
   <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
 </head>
 <body>
-  {% set navPrefix = "" if page.url == "/" else ("/" | url) %}
+  {%- set navPrefix = "" if page.url == rootUrl else rootUrl -%}
+  {%- if isEn -%}
+    {%- set deUrl = '/' | url if page.url == '/en/' else page.url | replace('/en/', '/') | url -%}
+    {%- set enUrl = page.url | url -%}
+  {%- else -%}
+    {%- set deUrl = page.url | url -%}
+    {%- set enUrl = ('/en' + page.url) | url -%}
+  {%- endif -%}
+  <div class="lang-switch" aria-label="{% if isEn %}Language switcher{% else %}Sprachumschalter{% endif %}">
+    <a class="lang-switch__link{% if not isEn %} lang-switch__link--active{% endif %}" href="{{ deUrl }}">DE</a>
+    <span class="lang-switch__sep" aria-hidden="true">|</span>
+    <a class="lang-switch__link{% if isEn %} lang-switch__link--active{% endif %}" href="{{ enUrl }}">EN</a>
+  </div>
+
   <nav class="globalnav" aria-label="Global">
     <div class="globalnav__content">
       <ul class="globalnav__links">
-        <li><a href="{% if page.url == '/' %}#{% else %}{{ '/' | url }}{% endif %}">Start</a></li>
-        <li><a href="{{ navPrefix }}#experience">Erfahrung</a></li>
-        <li><a href="{{ navPrefix }}#education">Bildung</a></li>
-        <li><a href="{{ navPrefix }}#certifications">Zertifikate</a></li>
-        <li><a href="{{ navPrefix }}#abroad">Ausland</a></li>
-        <li><a href="{{ navPrefix }}#languages">Sprachen</a></li>
-        <li><a href="{{ '/projects/' | url }}">Projekte</a></li>
+        <li><a href="{% if page.url == rootUrl %}#{% else %}{{ rootUrl }}{% endif %}">{% if isEn %}Home{% else %}Start{% endif %}</a></li>
+        <li><a href="{{ navPrefix }}#experience">{% if isEn %}Experience{% else %}Erfahrung{% endif %}</a></li>
+        <li><a href="{{ navPrefix }}#education">{% if isEn %}Education{% else %}Bildung{% endif %}</a></li>
+        <li><a href="{{ navPrefix }}#certifications">{% if isEn %}Certificates{% else %}Zertifikate{% endif %}</a></li>
+        <li><a href="{{ navPrefix }}#abroad">{% if isEn %}Abroad{% else %}Ausland{% endif %}</a></li>
+        <li><a href="{{ navPrefix }}#languages">{% if isEn %}Languages{% else %}Sprachen{% endif %}</a></li>
+        <li><a href="{{ projectsUrl }}">{% if isEn %}Projects{% else %}Projekte{% endif %}</a></li>
       </ul>
     </div>
   </nav>
@@ -29,12 +48,12 @@
   {{ content | safe }}
 
   <footer class="page-footer">
-    <a href="{{ '/impressum/' | url }}">Impressum</a>
+    <a href="{{ impressumUrl }}">{% if isEn %}Legal Notice{% else %}Impressum{% endif %}</a>
     <span aria-hidden="true">·</span>
-    <a href="{{ '/datenschutz/' | url }}">Datenschutz</a>
+    <a href="{{ datenschutzUrl }}">{% if isEn %}Privacy Policy{% else %}Datenschutz{% endif %}</a>
   </footer>
 
-  <button class="back-to-top" type="button" aria-label="Zum Seitenanfang">
+  <button class="back-to-top" type="button" aria-label="{% if isEn %}Back to top{% else %}Zum Seitenanfang{% endif %}">
     <i class="bi bi-arrow-up" aria-hidden="true"></i>
   </button>
 
